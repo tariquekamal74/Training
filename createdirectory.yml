@@ -4,6 +4,6 @@
 
    tasks:
    - name: Ensure apache is at the latest version
-     ansible.builtin.yum:
+     ansible.builtin.dnf:
       name: httpd
       state: latest
