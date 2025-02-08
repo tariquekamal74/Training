@@ -1,8 +1,9 @@
- ---
-- name: Update web servers
-  hosts: all
-  tasks:
-  - name: Ensure apache is at the latest version
-    ansible.builtin.yum:
+ - name: Update web server
+   hosts: webservers
+   
+
+   tasks:
+   - name: Ensure apache is at the latest version
+     ansible.builtin.yum:
       name: httpd
       state: latest
